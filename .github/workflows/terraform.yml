@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+
   pull_request:
 
 jobs:
@@ -24,4 +25,4 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-  run: terraform plan -var="aws_region=ap-south-1" -input=false
+        run: terraform plan -var="aws_region=ap-south-1" -input=false
